@@ -10,9 +10,9 @@ def next_move(posr, posc, board):
         for row in board:
             for cell in row:
                 if cell=='d':
-                    distance = abs(posr-board.index(row)) + abs(posc-row.index('d'))
+                    distance = abs(posr-board.index(row)) + abs(posc-                         row.index(cell))
                     if Min > distance:
-                        distance = Min
+                        Min = distance
                         r = board.index(row)
                         c = row.index(cell)
         if r > posr:
